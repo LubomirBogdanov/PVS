@@ -1,0 +1,19 @@
+-O0
+   text	   data	    bss	    dec	    hex	filename
+  11280	     52	      0	  11332	   2c44	./debug/main.axf
+
+-O1 (miga stranno)
+   text	   data	    bss	    dec	    hex	filename
+   9104	     16	      0	   9120	   23a0	./debug/main.axf
+
+-O2 (miga stranno)
+   text	   data	    bss	    dec	    hex	filename
+   9488	     16	      0	   9504	   2520	./debug/main.axf
+
+-O3 (miga adski stranno)
+   text	   data	    bss	    dec	    hex	filename
+  10448	     16	      0	  10464	   28e0	./debug/main.axf
+
+-Os (miga adski stranno)
+   text	   data	    bss	    dec	    hex	filename
+   8170	     16	      0	   8186	   1ffa	./debug/main.axf

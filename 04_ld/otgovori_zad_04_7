@@ -1,0 +1,10 @@
+No dead code removal:
+
+   text	   data	    bss	    dec	    hex	filename
+  61908	   1216	    288	  63412	   f7b4	./debug/main.axf
+
+With dead code remove:
+
+   text	   data	    bss	    dec	    hex	filename
+  18360	   1104	    132	  19596	   4c8c	./debug/main.axf
+

@@ -1,0 +1,8 @@
+deps_config := \
+	Kconfig
+
+autoconf.h: \
+	$(deps_config)
+
+
+$(deps_config): ;

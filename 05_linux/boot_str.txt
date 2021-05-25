@@ -1,0 +1,6 @@
+#define CONFIG_BOOTCOMMAND						\
+	"run bootcmd_romfs"
+
+#define CONFIG_EXTRA_ENV_SETTINGS \
+	"bootcmd_romfs=setenv bootargs ${bootargs} mmc dev 0 && fatload mmc 0 0xc0700000 /stm32f769-disco.dtb && fatload mmc 0 0xc0008000 /zImage && icache off;" \
+	"bootz 0x0c0008000 - 0xc0700000\0"

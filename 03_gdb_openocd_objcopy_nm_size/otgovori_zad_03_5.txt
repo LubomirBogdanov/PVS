@@ -1,0 +1,15 @@
+lbogdanov@laptop:~/Desktop$ telnet localhost 4444
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+Open On-Chip Debugger
+> mww 0x40023830 0x01     
+> mdw 0x40020000 
+0x40020000: a8000000 
+> mww 0x40020000 0xA9000000 
+> mww 0x40020004 0x0000 
+> mww 0x40020014 0x1000
+> mdw 0x40020014
+0x40020014: 00001000 
+> mww 0x40020014 0x1000
+

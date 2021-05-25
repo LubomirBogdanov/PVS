@@ -1,0 +1,6 @@
+#
+# Automatically generated file; DO NOT EDIT.
+# Main Menu
+#
+CONFIG_UART_BAUD_RATE=9600
+CONFIG_LED_BLINK_ITERATOR_400000=y

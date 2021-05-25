@@ -1,0 +1,18 @@
+dtb_addr=0xc0700000
+dtb_file=stm32f769/stm32f769-disco.dtb
+fdtcontroladdr=c0ea0128
+ipaddr=192.168.201.123
+kernel_addr=0xc0008000
+kernel_file=stm32f769/zImage
+mmcboot=mmc dev 0 && fatload mmc 0 ${dtb_addr} /${dtb_file} && fatload mmc 0 ${kernel_addr} /${kernel_file} && icache off && bootz ${kernel_addr} - ${dtb_addr}
+netboot=tftp ${dtb_addr} ${dtb_file} && tftp ${kernel_addr} ${kernel_file} && bootz ${kernel_addr} - ${dtb_addr}
+serverip=192.168.201.6
+soc=stm32f7
+spiboot=sf probe && sf read ${dtb_addr} 0 4000 && sf read ${kernel_addr} 10000 200000 && bootz ${kernel_addr} - ${dtb_addr}
+stderr=serial@40011000
+stdin=serial@40011000
+stdout=serial@40011000
+updatespi=sf probe && tftp ${dtb_addr} ${dtb_file} && sf erase 0 10000 && sf write ${dtb_addr} 0 ${filesize} && tftp ${kernel_addr} ${kernel_file} && sf erase 10000 200000 && sf write ${kernel_addr} 10000 ${filesize}
+vendor=st
+
+Environment size: 1227/8188 bytes
