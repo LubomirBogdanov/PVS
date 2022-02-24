@@ -16,7 +16,7 @@ void uart_init(uint32_t baud_rate){
 	*ahb1enr |= RCC_AHB1ENR_GPIOA_EN;
 	*gpio_a_moder |= GPIOA_MODER_AF_PA9; //PA9 - alternate function
 	*gpio_a_moder |= GPIOA_MODER_AF_PA10; //PA10 - alternate function
-	*gpio_a_otyper &= GPIOA_OTYPER_PA9; //PA9 - push-pull
+	*gpio_a_otyper &= ~GPIOA_OTYPER_PA9; //PA9 - push-pull
 	*gpio_afrh |= GPIOA_AF7_PA9; //PA9 = USART1_TX
 	*gpio_afrh |= GPIOA_AF7_PA10; //PA10 = USART1_RX
 
