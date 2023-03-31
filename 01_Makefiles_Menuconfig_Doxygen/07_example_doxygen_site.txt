@@ -1,0 +1,1 @@
+https://software-dl.ti.com/msp430/msp430_public_sw/mcu/msp430/MSP430_Driver_Library/latest/exports/driverlib/msp430_driverlib_2_91_13_01/doc/MSP430F5xx_6xx/html/index.html
